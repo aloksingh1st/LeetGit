@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "LeetGit",
+  "version": "1.0",
+  "description": "Description of your extension",
+  "icons": {
+    "128": "logo.png"
+  },
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
