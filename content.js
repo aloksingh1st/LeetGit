@@ -12,7 +12,6 @@ async function processSubmission() {
     }
 }
 
-// document.addEventListener('DOMContentLoaded', processSubmission);
 processSubmission();
 
 async function logSubmissionResult() {

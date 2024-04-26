@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
     <title>LeetGit</title>
-</head>
-<body>
-    <p>Git hub is here..</p>
-</body>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="inputcontainer" style="width: 13rem;">
+      <h2>Enter GitHub Details</h2>
+      <div>
+        <label for="owner">Username:</label>
+        <input type="text" id="owner" />
+      </div>
+      <div>
+        <label for="accessToken">Access Token:</label>
+        <input type="text" id="accessToken" />
+      </div>
+      <div>
+        <label for="repo">Repository Name:</label>
+        <input type="text" id="repo" />
+      </div>
+      <button id="saveButton">Connect Repository</button>
+    </div>
+    <!-- Display saved data -->
+
+    <div class="container" id="details" style="width: 13rem;">
+      <h3>Saved GitHub Details:</h3>
+      <p>Owner: <span id="savedOwner"></span></p>
+      <p>Access Token: <span id="savedAccessToken"></span></p>
+      <p>Repository Name: <span id="savedRepo"></span></p>
+    </div>
+  </body>
 </html>
