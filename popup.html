@@ -3,9 +3,51 @@
   <head>
     <title>LeetGit</title>
     <script src="popup.js"></script>
+
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .hidden {
+        display: none;
+      }
+
+      input{
+        border-radius: 5px;
+        outline: none;
+      }
+
+      .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+
+        padding: 0.375rem 0.75rem;
+        border-radius: 0.25rem;
+      }
+      .btn-primary:hover {
+        color: #fff;
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+      .btn-primary:focus,
+      .btn-primary.focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+        border-color: #0056b3;
+      }
+      .btn-primary.disabled,
+      .btn-primary:disabled {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+    </style>
   </head>
   <body>
-    <div id="inputcontainer" style="width: 13rem;">
+    <div id="inputcontainer" style="width: 13rem">
       <h2>Enter GitHub Details</h2>
       <div>
         <label for="owner">Username:</label>
@@ -19,15 +61,16 @@
         <label for="repo">Repository Name:</label>
         <input type="text" id="repo" />
       </div>
-      <button id="saveButton">Connect Repository</button>
+      <button id="saveButton" class="btn-primary" style="margin:6px 0px 7px 18px;">Connect Repository</button>
     </div>
     <!-- Display saved data -->
 
-    <div class="container" id="details" style="width: 13rem;">
-      <h3>Saved GitHub Details:</h3>
-      <p>Owner: <span id="savedOwner"></span></p>
-      <p>Access Token: <span id="savedAccessToken"></span></p>
-      <p>Repository Name: <span id="savedRepo"></span></p>
+    <div class="container" id="details" style="width: 13rem">
+      <h3>Repository Connected</h3>
+      <p>User: <span id="savedOwner"></span></p>
+      <p class="hidden">Access Token: <span id="savedAccessToken"></span></p>
+      <p style="margin: 0 0px 10px 0px">Repository Name: <span id="savedRepo"></span></p>
+      <button type="button" class="btn-primary" id="disconnectButton">Disconnect</button>
     </div>
   </body>
 </html>

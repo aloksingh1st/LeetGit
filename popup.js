@@ -34,7 +34,7 @@ function getDetails() {
 function updatePopupContent(owner, accessToken, repo) {
     // Update HTML elements with saved data
     document.getElementById("inputcontainer").style.display = 'none';
-    document.getElementById("details").style.display = "block";
+    document.getElementById("details").style.display = 'block';
     document.getElementById('savedOwner').textContent = owner;
     document.getElementById('savedAccessToken').textContent = accessToken;
     document.getElementById('savedRepo').textContent = repo;
@@ -42,9 +42,11 @@ function updatePopupContent(owner, accessToken, repo) {
 
 
 function removeDetails(){
+    document.getElementById("details").style.display = 'none !important';
     chrome.storage.local.remove(['accessTokenLeetGit', 'ownerLeetGit', 'repoLeetGit'], function() {
         console.log('Data removed from storage.');
     });
+
 }
 
 
@@ -54,4 +56,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("details").style.display = "none";
     getDetails();
     document.getElementById('saveButton').addEventListener('click', saveAndChangeContent);
+    document.getElementById('disconnectButton').addEventListener('click', removeDetails);
 });

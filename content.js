@@ -1,4 +1,7 @@
-// content.js
+
+// const button = document.querySelector('[data-e2e-locator="console-submit-button"]');
+
+
 
 async function processSubmission() {
     console.log("DOMContentLoaded event triggered");
@@ -28,7 +31,19 @@ async function logSubmissionResult() {
             }
         });
 
-        // Start observing changes in the DOM
         observer.observe(document.body, { childList: true, subtree: true });
     });
 }
+
+
+function handleClick() {
+    console.log("CLICKED");
+    processSubmission();
+}
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.querySelector('[data-e2e-locator="console-submit-button"]');
+    button.addEventListener('click', handleClick);
+});
