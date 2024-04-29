@@ -1,25 +1,3 @@
-// Listen for messages from content script
-// const accessToken = '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'; // Replace with your GitHub personal access token
-// const owner = 'aloksingh1st'; // Replace with the owner of the repository
-// const repo = 'DSA_QUESTIONS'; // Replace with the name of the repository
-
-
-// let accessToken;
-// let owner;
-// let repo;
-
-
-// chrome.storage.local.get(['accessTokenLeetGit', 'ownerLeetGit', 'repoLeetGit'], function(result) {
-//     // Extract data from the result object
-//     accessToken = result.accessTokenLeetGit;
-//     owner = result.ownerLeetGit;
-//     repo = result.repoLeetGit ; 
-//     // Use the retrieved data
-//     console.log('Access Token:', accessToken);
-//     console.log('Owner:', owner);
-//     console.log('Repository:', repo);
-// });
-
 
 // Function to create a new commit in the repository
 function createCommit(filePath, content, commitMessage) {
