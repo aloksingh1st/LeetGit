@@ -39,14 +39,24 @@ LeetGit allows you to configure the following settings:
 ├── manifest.json
 └── popup.html
 
-
 ## Development
 
-To develop LeetGit locally:
+To develop or modify LeetGit locally:
 
-1. Clone the LeetGit repository.
-2. Open Chrome and go to `chrome://extensions/`.
-3. Enable Developer mode.
-4. Click on "Load unpacked" and select the LeetGit directory.
-5. Make changes to the extension code as needed.
-6. Reload the extension to apply changes.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/LeetGit.git
+    ```
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Enable **Developer mode**.
+4. Click on **Load unpacked** and select the `LeetGit` directory.
+5. Make necessary changes to the code and reload the extension to apply your modifications.
+
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request with improvements or bug fixes.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
